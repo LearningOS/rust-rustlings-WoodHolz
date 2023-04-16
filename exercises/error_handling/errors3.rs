@@ -4,11 +4,9 @@
 // Why not? What should we do to fix it?
 // Execute `rustlings hint errors3` or use the `hint` watch subcommand for a hint.
 
-
-
 use std::num::ParseIntError;
 
-fn main() -> Result<(), ParseIntError> {
+fn main() -> Result<(), ParseIntError>{
     let mut tokens = 100;
     let pretend_user_input = "8";
 
@@ -27,5 +25,7 @@ pub fn total_cost(item_quantity: &str) -> Result<i32, ParseIntError> {
     let processing_fee = 1;
     let cost_per_item = 5;
     let qty = item_quantity.parse::<i32>()?;
+    // 此时qty应该是一个i32的类型
+
     Ok(qty * cost_per_item + processing_fee)
 }
